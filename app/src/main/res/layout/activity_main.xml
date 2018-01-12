@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pragyamutluru.scarnesdice.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/preview" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="26dp"
+        android:text="User Score :"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/userScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_marginStart="53dp"
+        android:layout_toEndOf="@+id/textView2"
+        android:text="0"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="26dp"
+        android:text="Computer Score :"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/compScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/userScore"
+        android:layout_alignTop="@+id/textView4"
+        android:text="0"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/dice1" />
+
+    <Button
+        android:id="@+id/buttonHold"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="57dp"
+        android:onClick="holdClicked"
+
+        android:background="@drawable/back"
+        android:text="Hold"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/buttonRoll"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:onClick="rollButtonClicked"
+
+        android:background="@drawable/back"
+        android:text="Roll"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_alignBottom="@+id/buttonHold" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="33dp"
+        android:onClick="resetClicked"
+        android:background="@drawable/back"
+        android:text="Reset"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/buttonHold" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="23dp"
+        android:text="Turn Score :"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/turnScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView5"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignStart="@+id/compScore"
+        android:text="0"
+        android:textStyle="bold" />
+</RelativeLayout>
